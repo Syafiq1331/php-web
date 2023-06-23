@@ -50,4 +50,25 @@
   ?>
   ```
 
--
+### Tanggal 23 Juni 2023
+
+- Session di PHP
+  Session adalah cara untuk menyimpan informasi di dalam server. Session biasanya digunakan untuk menyimpan informasi login, keranjang belanja, dan lain-lain.
+
+  Contoh:
+
+  ```php
+  <?php
+  session_start();
+  $_SESSION["name"] = "Rizky";
+  ?>
+  ```
+
+  ```php
+  <?php
+  session_start();
+  echo $_SESSION["name"];
+  ?>
+  ```
+
+- Session itu memiliki kekurangan karena ia di simpan di dalam sebuah file, ketika kita membuat 2 web server maka session hanya akan menyimpan file tersebut di dalam server yang satu saja dan ketika kita meng-akses ke server kedua maka session akan hilang karena session yang telah kita buat hanya ada dan berfungsi di server satu saja. Jadi itulah yang membuat session cukup buruk untuk aplikasi php yang scale nya gede beda dengan aplikasi php yang kecil, menggunakan session sudah cukup saja.
